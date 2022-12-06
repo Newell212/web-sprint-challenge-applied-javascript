@@ -1,5 +1,24 @@
 const Header = (title, date, temp) => {
-  // TASK 1
+  const div = document.createElement('div');
+
+  div.setAttribute("class", "header");
+
+  const dateSpan = document.createElement("span");
+  dateSpan.setAttribute("class", "date");
+  dateSpan.textContent = `${date}`;
+  div.appendChild(dateSpan);
+
+  const titleHeader = document.createElement("h1");
+  titleHeader.textContent = title;
+  div.appendChild(titleHeader);
+
+  const tempSpan = document.createElement("span");
+  tempSpan.setAttribute("class", "temp");
+  tempSpan.textContent = `${temp}`;
+  div.appendChild(tempSpan);
+
+  return div;
+  
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
   // The html tags used, the hierarchy of elements and their attributes must match the provided markup exactly!
