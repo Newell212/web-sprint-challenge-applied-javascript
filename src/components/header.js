@@ -1,11 +1,10 @@
 const Header = (title, date, temp) => {
   const div = document.createElement('div');
-
   div.setAttribute("class", "header");
 
   const dateSpan = document.createElement("span");
   dateSpan.setAttribute("class", "date");
-  dateSpan.textContent = `${date}`;
+  dateSpan.textContent = date;
   div.appendChild(dateSpan);
 
   const titleHeader = document.createElement("h1");
@@ -14,9 +13,9 @@ const Header = (title, date, temp) => {
 
   const tempSpan = document.createElement("span");
   tempSpan.setAttribute("class", "temp");
-  tempSpan.textContent = `${temp}`;
+  tempSpan.textContent = temp;
   div.appendChild(tempSpan);
-
+  
   return div;
   
   // ---------------------
@@ -33,6 +32,8 @@ const Header = (title, date, temp) => {
 }
 
 const headerAppender = (selector) => {
+  document.querySelector(selector).appendChild(Header('foo', 'bar', 'baz'));
+
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
